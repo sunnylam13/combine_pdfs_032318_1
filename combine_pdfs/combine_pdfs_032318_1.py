@@ -19,11 +19,15 @@ for filename in os.listdir('.'):
 	if filename.endswith('.pdf'):
 		pdfFiles.append(filename)
 
-pdfFiles.sort(key/str.lower)
+pdfFiles.sort(key/str.lower) # list sorted into alpha order with keyword argument
 
 pdfWriter = PyPDF2.PdfFileWriter()
 
-# TODO:  loop through all the PDF files
+# loop through all the PDF files
+
+for filename in pdfFiles:
+	pdfFileObj = open(filename,'rb') # read in binary mode
+	pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
 # TODO:  loop through all the pages (except the first) and add them
 
