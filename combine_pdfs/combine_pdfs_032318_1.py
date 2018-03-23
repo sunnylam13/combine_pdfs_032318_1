@@ -34,5 +34,10 @@ for filename in pdfFiles:
 		pageObj = pdfReader.getPage(pageNum)
 		pdfWriter.addPage(pageObj)
 
-# TODO:  save the resulting PDF to a file
+# save the resulting PDF to a file
+
+pdfOutput = open('combinedminutes.pdf','wb')
+pdfWriter.write(pdfOutput)
+pdfOutput.close()
+
 
