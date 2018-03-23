@@ -26,3 +26,13 @@ what the code should do...
 
 * write output pdf to a file `combinedminutes.pdf`
 
+## Friday, March 23, 2018 4:55 PM
+
+Test pdfs are in:
+
+	tests/testpdfs
+
+relative to program location directory
+
+	../tests/testpdfs
+

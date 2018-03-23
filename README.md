@@ -7,3 +7,6 @@ This program assumes you have a situation where you don't want a cover page (the
 ## Resources
 
 ABSP:  506
+
+[Sort Lists How To in Python 3](https://docs.python.org/3/howto/sorting.html)
+

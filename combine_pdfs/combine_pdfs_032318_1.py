@@ -3,23 +3,30 @@
 #! python3
 
 # USAGE
-# python3 combine_pdfs_032318_1.py
+# python3 combine_pdfs_032318_1.py "../tests/testpdfs"
 
-import PyPDF2, os
+import PyPDF2, os, sys
 
 import logging
 logging.basicConfig(level=logging.DEBUG, format=" %(asctime)s - %(levelname)s - %(message)s")
 # logging.disable(logging.CRITICAL)
 
+directory_target = sys.argv[1]
+
 # get all the pdf filenames
 
 pdfFiles = []
 
-for filename in os.listdir('.'):
+for filename in os.listdir(directory_target):
 	if filename.endswith('.pdf'):
-		pdfFiles.append(filename)
+		pdfFilePath = os.path.join(directory_target,filename)
+		# pdfFiles.append(filename)
+		pdfFiles.append(pdfFilePath)
 
-pdfFiles.sort(key/str.lower) # list sorted into alpha order with keyword argument
+pdfFiles.sort(key=str.lower) # list sorted into alpha order with keyword argument
+
+logging.debug('pdf files list after sorting')
+logging.debug(pdfFiles)
 
 pdfWriter = PyPDF2.PdfFileWriter() # this is the new pdf temporary file, you will add pages to this
 
@@ -37,6 +44,7 @@ for filename in pdfFiles:
 # save the resulting PDF to a file
 
 pdfOutput = open('combinedminutes.pdf','wb')
+logging.debug('combinedminutes.pdf created and saved')
 pdfWriter.write(pdfOutput)
 pdfOutput.close()
 
