@@ -6,8 +6,8 @@ except ImportError:
 config = {
 	'description': 'You merge several PDF files and only specifically chosen pages into a single PDF file.',
 	'author': 'Sunny Lam',
-	'url': 'URL to get it at',
-	'download_url': 'Where to download it',
+	'url': 'https://github.com/sunnylam13/combine_pdfs_032318_1',
+	'download_url': 'https://github.com/sunnylam13/combine_pdfs_032318_1',
 	'author_email': 'sunny.lam@gmail.com',
 	'version': '0.1',
 	'install_requires': ['nose'],
