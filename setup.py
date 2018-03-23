@@ -11,7 +11,7 @@ config = {
 	'author_email': 'sunny.lam@gmail.com',
 	'version': '0.1',
 	'install_requires': ['nose'],
-	'packages': ['PyPDF2,logging'],
+	'packages': ['PyPDF2,logging,os'],
 	'scripts': [],
 	'name': 'Combine Chosen Pages from Many PDFs'
 }
