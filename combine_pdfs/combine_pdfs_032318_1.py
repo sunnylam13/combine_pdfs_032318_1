@@ -21,7 +21,7 @@ for filename in os.listdir('.'):
 
 pdfFiles.sort(key/str.lower) # list sorted into alpha order with keyword argument
 
-pdfWriter = PyPDF2.PdfFileWriter()
+pdfWriter = PyPDF2.PdfFileWriter() # this is the new pdf temporary file, you will add pages to this
 
 # loop through all the PDF files
 
@@ -29,7 +29,10 @@ for filename in pdfFiles:
 	pdfFileObj = open(filename,'rb') # read in binary mode
 	pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
-# TODO:  loop through all the pages (except the first) and add them
+	# loop through all the pages (except the first) and add them
+	for pageNum in range(1,pdfReader.numPages): # cycle through all pages except the first which is n = 0, hence start at n = 1
+		pageObj = pdfReader.getPage(pageNum)
+		pdfWriter.addPage(pageObj)
 
 # TODO:  save the resulting PDF to a file
 
