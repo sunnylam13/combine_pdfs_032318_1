@@ -36,3 +36,13 @@ relative to program location directory
 
 	../tests/testpdfs
 
+## Friday, March 23, 2018 5:04 PM
+
+Ideas for similar programs
+
+* cut out specific pages from PDFs
+
+* reorder pages in a pdf
+
+* create pdf from only those pages that have some specific text, identified by `extractText()` and boolean or regex searching
+
